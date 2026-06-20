@@ -1,0 +1,58 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Button from "../components/Button";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen flex flex-col bg-[#faf8f3]">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="flex-1 flex items-center justify-center px-6 py-28 md:py-36">
+        <div className="max-w-6xl w-full text-center">
+          
+          {/* Welcome Tag */}
+          <div className="mb-8">
+            <span className="text-[#c4845c] text-sm tracking-[0.3em] uppercase font-medium">
+              ✦ Welcome ✦
+            </span>
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="max-w-4xl mx-auto font-['Playfair_Display'] text-5xl md:text-6xl lg:text-7xl font-semibold text-[#2a251f] leading-[1.1] tracking-tight text-center">
+            Some words were never meant to be sent.
+          </h1>
+
+          {/* Subheading */}
+          <p className="max-w-2xl mx-auto mt-8 text-lg md:text-xl leading-relaxed text-[#6b5d52] text-center">
+            But they still deserve a place to exist. Letters Never Sent is a
+            digital archive for the words you've always wanted to say, to your
+            past, your future, or someone you've lost.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button to="/letters" variant="primary" size="lg">
+              Read Letters
+            </Button>
+
+            <Button to="/write" variant="secondary" size="lg">
+              Write a Letter
+            </Button>
+          </div>
+
+          {/* Quote */}
+          <div className="mt-20 text-center">
+            <p className="text-[#d4c5b9] italic font-['Playfair_Display'] text-lg">
+              "Every letter tells a story."
+            </p>
+
+            <div className="w-24 h-px bg-[#e8d4c4] mx-auto mt-6" />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
